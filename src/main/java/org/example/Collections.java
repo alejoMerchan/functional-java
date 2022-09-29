@@ -68,4 +68,21 @@ public class Collections {
                 .forEach(System.out::println);
     }
 
+    /**
+     * Terminating Iterations
+     */
+    public void terminatingIt1(){
+        friends.stream()
+                .limit(2)
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
+    }
+
+    public void terminatingIt2(){
+        friends.stream()
+                .takeWhile(name -> name.length() > 4)
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
+    }
+
 }
